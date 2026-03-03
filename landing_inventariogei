@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Inventario Nacional de Gases de Efecto Invernadero y Monitoreo de Medidas de Mitigación</title>
+    <meta name="viewport" content="width&#x3D;device-width,&#x20;initial-scale&#x3D;1.0">
+<meta http-equiv="X-UA-Compatible" content="IE&#x3D;edge">
+<meta name="description" content="El&#x20;Inventario&#x20;Nacional&#x20;de&#x20;Gases&#x20;de&#x20;Efecto&#x20;Invernadero&#x20;estima&#x20;anualmente&#x20;los&#x20;gases&#x20;emitidos&#x20;y&#x20;absorbidos&#x20;de&#x20;la&#x20;atm&#xF3;sfera&#x20;para&#x20;el&#x20;territorio&#x20;argentino.">
+    <!-- Le styles -->
+    <link href="&#x2F;img&#x2F;favicon-ambiente.png" rel="shortcut&#x20;icon" type="image&#x2F;vnd.microsoft.icon">
+<link href="&#x2F;bower_components&#x2F;c3&#x2F;c3.css" media="screen" rel="stylesheet" type="text&#x2F;css">
+<link href="&#x2F;css&#x2F;styles.css&#x3F;ver&#x3D;7" media="screen" rel="stylesheet" type="text&#x2F;css">
+<link href="&#x2F;css&#x2F;psd3.css" media="screen" rel="stylesheet" type="text&#x2F;css">
+    <script>
+        var chart = '';
+    </script>
+
+    <!-- Scripts -->
+
+    <script type="text&#x2F;javascript" src="&#x2F;bower_components&#x2F;d3&#x2F;d3.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;bower_components&#x2F;chart.js&#x2F;dist&#x2F;Chart.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;bower_components&#x2F;d3-plugins-sankey&#x2F;sankey.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;bower_components&#x2F;d3.chart&#x2F;d3.chart.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;bower_components&#x2F;d3.chart.sankey.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;bower_components&#x2F;c3&#x2F;c3.min.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;js&#x2F;psd3.min.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;bower_components&#x2F;jquery&#x2F;dist&#x2F;jquery.min.js"></script>
+<script type="text&#x2F;javascript" src="&#x2F;js&#x2F;distribucion.js&#x3F;ver&#x3D;49"></script></head>
+
+<body class="home">
+    <header>
+        <a href="./" title="Inventario Nacional de Gases de Efecto Invernadero y Monitoreo de Medidas de Mitigación"><img src="/img/logo-ministerio-new-resized.png" alt="" class="logo" /></a>
+
+        <div class="inventario">
+            Inventario Nacional de Gases de Efecto Invernadero<br />y Monitoreo de Medidas de Mitigación
+
+        </div>
+
+        <nav>
+        <ul class="menu">
+            <li><a href="./">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Inventario</a>
+                <ul class="submenu">
+                    <li><a href="resultados">Plataforma Interactiva</a></li>
+                    <li><a href="files/Booklet_INGEI_2024.pdf" target="_blank">Booklet</a></li>
+                    <li><a href="files/Fichas 2024_Castellano.pdf" target="_blank">Fichas</a></li>
+                    <li><a href="files/factores-emision.xlsx" target="_blank">Factores de emisión</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Monitoreo</a>
+                <ul class="submenu">
+                    <li><a href="resultados#monitor" onclick="parseURL(url)">Plataforma Interactiva</a></li>
+                    <li><a href="https://www.argentina.gob.ar/sites/default/files/pnaymcc_2022_-_vf_resol.pdf" target="_blank">Plan Nacional</a></li>
+                    <li><a href="files/Desarrollo del indicador de seguimiento de la segunda NDC en base al INGEI 2022.pdf" target="_blank">Indicador NDC</a></li>
+                </ul>
+            </li>
+            <li><a href="reportes">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <div class="redes">
+            <a href="https://youtube.com/channel/UC_Swjr_SoDptDSv6TYsWAvw" target="_blank" class="youtube"></a>
+    </div>
+    </header>
+
+    <div id="home-content-wrapper">
+        <div class="content">
+
+    
+        <div class="logo">
+            <img src="/img/iconos-home-nuevo.png" />
+        </div>
+        <div class="content50 home50">
+
+        <h1>
+         
+         Inventario Nacional de Gases de Efecto Invernadero (INGEI)
+        </h1>
+
+        <h2>
+            <br />
+            El Inventario Nacional de Gases de Efecto Invernadero (INGEI) contabiliza los gases emitidos y absorbidos de la atmósfera durante un año calendario en el total del territorio nacional. Incluye únicamente las fuentes de emisión y absorción para las cuales se cuenta con la información disponible para realizar la estimación, siguiendo los lineamientos del Grupo Intergubernamental de Expertos sobre el Cambio Climático (IPCC). El INGEI permite identificar aquellos sectores del país con mayor potencial de reducción de emisiones.
+        </h2>
+
+        <h2>
+            <br />
+            Por otro lado, el conjunto de medidas a través de las cuales se reducen emisiones de gases de efecto invernadero forma partes de distintos planes nacionales. En el marco del Plan Nacional de Adaptación y Mitigación al Cambio Climático (PNAyMCC) se establecen una serie de indicadores de seguimiento del grado de avance.
+            <br />
+            <br />
+            <br />
+
+        </h2>
+        <!-- <div class="guion">
+            <img src="/img/home-guion.png" />
+        </div> -->
+
+        <!-- <div class="page1 page">
+
+            <h2>El Inventario Nacional de Gases de Efecto Invernadero permite identificar aquellos sectores del país con mayor potencial de reducción de
+                emisiones a través de la implementación de Medidas de Mitigación.</h2>
+
+             <div class="buttons">
+                <button onclick="mostrarDiv('.inventarioGases','.home50')">INVENTARIO NACIONAL DE GASES<br>DE EFECTO INVERNADERO</button>
+                <button onclick="mostrarDiv('.medidasMitigacion','.home50')">MONITOREO DE MEDIDAS<br>DE MITIGACIÓN</button>
+                <button onclick="mostrarDiv('.reportesInternacionales','.home50')">REPORTES INTERNACIONALES</button>
+            </div> 
+
+        </div>
+
+        <div class="page2 page">
+
+            <h2>Reporte Bienal de Actualización (BUR, por su sigla en inglés)</h2>
+
+
+            <p>El <strong>reporte</strong> contiene información actualizada sobre los <strong>inventarios nacionales de GEI</strong>, las medidas de mitigación, las necesidades encontradas y el apoyo recibido.</p>
+
+            <div class="buttons">
+                <a href="/files/2doBUR ARGENTINA.pdf" target="_blank"><button>VER 2<sup>do</sup> BUR</button></a>
+                <a href="/files/2doBUR - Anexos - ARGENTINA.pdf" target="_blank"><button>VER ANEXOS<br />2<sup>do</sup> BUR</button></a>
+                <a href="http://unfccc.int/national_reports/non-annex_i_natcom/reporting_on_climate_change/items/8722.php" target="_blank"><button>VER PORTAL<br />DE UNFCCC</button></a>
+            </div>
+
+            <div class="buttons volver">
+                <a href="javascript:$('.page').toggle();"><button>
+                        < VOLVER</button></a>
+            </div>
+
+        </div> -->
+
+    </div>
